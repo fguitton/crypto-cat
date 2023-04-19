@@ -38,7 +38,7 @@ function readLedger(table: string, key: string): string {
         value = new ArrayBuffer(result);
         result = Ledger.readFromTableIntoBuffer(t, k, value);
         if (result < 0)
-            return ""; // todo : report error
+            return ""; // todo : report errors
     }
     return String.UTF8.decode(value, true);
 }
